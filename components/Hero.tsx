@@ -15,8 +15,8 @@ function Hero({}: Props) {
       <div className="h-full">
         <div className="flex-col flex absolute font-bold text-2xl px-4 text-yellow-300 bottom-40 z-20">
           <span className="drop-shadow-2xl">
-            "It is through science that we prove, but through intuition that we
-            discover."
+            &quot It is through science that we prove, but through intuition
+            that we discover.&quot
           </span>
           <span className="text-white font-normal text-lg italic text-end pr-5">
             - Henri Poincaré
