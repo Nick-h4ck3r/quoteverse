@@ -48,11 +48,11 @@ function Quote({}: Props) {
   };
 
   return (
-    <>
-      <div className="bg-purple-200 py-4">
-        <div className="text-center font-semibold">Generate a cool quote!</div>
-        <div className="flex items-center justify-center mt-3">
-          <h1 className="mx-2">Tags:</h1>
+    <div id="Quote" className="h-screen bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-400">
+      <div className="bg-purple-200 bg-opacity-40 py-4">
+        <div className="text-center font-bold text-6xl py-10">Generate a cool quote!</div>
+        <div className="flex items-center justify-center mt-3 max-w-7xl mx-auto">
+          <h1 className="mx-2 font-semibold">Tags:</h1>
           <ul className="flex text-white overflow-scroll scrollbar-none">
             {tags.map((tag) => (
               <li
@@ -135,7 +135,7 @@ function Quote({}: Props) {
       </div>
 
       <LexicaImage quote={quote?.text} />
-    </>
+    </div>
   );
 }
 

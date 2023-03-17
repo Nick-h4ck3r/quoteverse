@@ -4,28 +4,38 @@ type Props = {};
 
 function Hero({}: Props) {
   return (
-    <div className="h-[610px] flex">
-      <div className="w-[595px] items-center justify-center flex bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-400">
-        <h1 className="px-3 font-bold text-5xl text-white pl-6">
-          Create a personalized image quote using AI-generated artwork inspired
-          by your chosen quote.
+    <div className="flex bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-400 px-28">
+      <div className="items-center justify-center flex flex-col max-w-6xl text-center">
+        <h1 className="font-medium text-3xl text-white leading-loose">
+          create a{" "}
+          <span className="text-6xl font-bold">Personalized image quote</span>{" "}
+          using <br />{" "}
+          <span className="text-7xl font-bold underline decoration-yellow-400">
+            {" "}
+            AI-generated artwork<span className="text-yellow-300">.</span>
+          </span>
+          {""}
+          <br />
+          inspired by your chosen quote.
         </h1>
+        <div>
+          <a href="#Quote">
+            <button className="bg-white text-black font-bold py-2 px-4 rounded-full mt-10">
+              Try it yourself{" "}
+              <img
+                src="https://img.icons8.com/material-outlined/18/null/sparkling.png"
+                className="inline-block pb-0.5 ml-1"
+              />
+            </button>
+          </a>
+        </div>
       </div>
 
-      <div className="h-full">
-        <div className="flex-col flex absolute font-bold text-2xl px-4 text-yellow-300 bottom-40 z-20">
-          <span className="drop-shadow-2xl">
-            &quot It is through science that we prove, but through intuition
-            that we discover.&quot
-          </span>
-          <span className="text-white font-normal text-lg italic text-end pr-5">
-            - Henri Poincaré
-          </span>
-        </div>
-        <div className="bg-gray-800">
+      <div className="flex items-center justify-center mx-auto rounded-md">
+        <div className="rounded-md ml-0">
           <img
-            src="/heroImage.jpg"
-            className="object-contain h-full opacity-80"
+            src="/final.png"
+            className="object-cover opacity-90 rounded-md my-20 w-full h-[650px] drop-shadow-2xl"
             alt=""
           />
         </div>
