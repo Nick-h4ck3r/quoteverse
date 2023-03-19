@@ -8,9 +8,14 @@ function LexicaImage({ quote }: Props) {
   const [imageUrl, setImageUrl] = React.useState<string | null>(null);
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
+  // map over the quote words and replace spaces with + for the api
+  const quoteWords = quote?.split(" ").map((word) => word.replace(" ", "+"));
+
   const searchImage = async () => {
     setIsLoading(true);
-    const response = await fetch(`https://lexica.art/api/v1/search?q=${quote}`);
+    const response = await fetch(
+      `https://lexica.art/api/v1/search?q=${quoteWords}`
+    );
     const data = await response.json();
 
     if (data.images && data.images.length > 0) {
@@ -59,7 +64,10 @@ function LexicaImage({ quote }: Props) {
             </button>
 
             <div className="text-center text-white text-xs md:text-sm mt-4 px-4">
-              <span>P.S. Don&apos;t send too many requests, otherwise request will stuck.</span>
+              <span>
+                P.S. Don&apos;t send too many requests, otherwise request will
+                stuck.
+              </span>
             </div>
           </div>
           {isLoading ? (
@@ -83,7 +91,9 @@ function LexicaImage({ quote }: Props) {
                   </div>
                 </>
               ) : (
-                <div className="text-center text-white mx-auto">No image found.</div>
+                <div className="text-center text-white mx-auto">
+                  No image found.
+                </div>
               )}
             </div>
           )}
