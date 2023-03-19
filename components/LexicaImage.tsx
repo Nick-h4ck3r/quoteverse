@@ -59,7 +59,7 @@ function LexicaImage({ quote }: Props) {
             </button>
 
             <div className="text-center text-white text-xs mt-4 px-4">
-              <span>P.S. Don't send too many requests, otherwise request will stuck.</span>
+              <span>P.S. Don&apos;t send too many requests, otherwise request will stuck.</span>
             </div>
           </div>
           {isLoading ? (
