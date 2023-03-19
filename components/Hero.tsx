@@ -4,12 +4,12 @@ type Props = {};
 
 function Hero({}: Props) {
   return (
-    <div className="flex bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-400 px-28">
-      <div className="items-center justify-center flex flex-col max-w-6xl text-center">
-        <h1 className="font-bold text-5xl text-white leading-loose ml-20">
+    <div className="flex md:flex-row flex-col-reverse bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-400 px-10 md:px-28">
+      <div className="items-center justify-center flex flex-col md:max-w-6xl text-center md:mt-0 mb-16 md:mb-0">
+        <h1 className="font-semibold text-2xl md:text-5xl text-white leading-loose md:ml-20">
           a personalized image quote using
           <br />
-          <span className="text-7xl font-bold underline decoration-yellow-400">
+          <span className="md:text-7xl text-4xl font-bold underline decoration-yellow-400">
             AI-generated artwork.
           </span>
           {/* <svg
@@ -26,7 +26,7 @@ function Hero({}: Props) {
         </h1>
         <div>
           <a href="#Quote">
-            <button className="bg-white text-black font-bold py-2 px-4 rounded-full mt-10">
+            <button className="bg-white text-black font-bold py-2 px-4 rounded-full mt-10 text-sm md:text-base">
               Try it yourself{" "}
               <img
                 src="https://img.icons8.com/material-outlined/18/null/sparkling.png"
@@ -38,10 +38,10 @@ function Hero({}: Props) {
       </div>
 
       <div className="flex items-center justify-center mx-auto rounded-md">
-        <div className="rounded-md ml-0">
+        <div className="rounded-md ml-0 md:ml-0">
           <img
             src="/final.png"
-            className="object-cover opacity-90 rounded-md my-20 w-full h-[650px] drop-shadow-2xl"
+            className="object-cover opacity-90 rounded-md my-20 md:w-full h-[350px] md:h-[650px] w-[600px] drop-shadow-2xl"
             alt=""
           />
         </div>

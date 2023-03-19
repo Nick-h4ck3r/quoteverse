@@ -49,25 +49,12 @@ function Quote({}: Props) {
 
   return (
     <div id="Quote" className="h-screen bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-400">
-      <div className="bg-purple-200 bg-opacity-40 py-4">
-        <div className="text-center font-bold text-6xl py-10">Generate a cool quote!</div>
-        <div className="flex items-center justify-center mt-3 max-w-7xl mx-auto">
-          <h1 className="mx-2 font-semibold">Tags:</h1>
-          <ul className="flex text-white overflow-scroll scrollbar-none">
-            {tags.map((tag) => (
-              <li
-                key={tag._id}
-                className="bg-purple-600 text-sm mx-1 px-3 py-2 rounded-md my-1 flex-shrink-0 hover:bg-purple-800 hover:cursor-pointer"
-                onClick={() => fetchQuoteByTag(tag.slug)}
-              >
-                <span>#{tag.name}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="bg-purple-200 bg-opacity-40 py-4 pb-7">
+        <div className="text-center font-bold md:text-6xl text-5xl py-10">Generate a cool quote!</div>
+        
 
         {/* Searchbar for quote */}
-        <div className="flex items-center justify-center mt-3 mx-auto max-w-3xl lg:max-w-5xl">
+        <div className="flex items-center justify-center mt-3 md:mx-auto max-w-3xl lg:max-w-5xl mx-5 flex-col md:flex-row">
           {/* <input
             className="bg-gray-100 appearance-none border-2 border-gray-100 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
             id="inline-full-name"
@@ -75,18 +62,18 @@ function Quote({}: Props) {
             placeholder="Search for a quote"
           /> */}
 
-          <div className="pt-1">
+          <div className="pt-5 text-xl">
             <span className="text-black font-semibold">
               Click on a{" "}
               <span className="bg-purple-600 font-normal text-white rounded px-2 py-1 mx-1">
                 #tag
               </span>{" "}
-              to get a quote with that tag, or get a
+              to get a quote with that tag, or generate...
             </span>
           </div>
 
           <button
-            className="bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded ml-3"
+            className="bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded ml-3 md:mt-0 mt-3"
             onClick={fetchQuote}
             disabled={isLoading}
           >
@@ -125,11 +112,26 @@ function Quote({}: Props) {
           </button>
         </div>
 
+        <div className="flex items-center justify-center md:mt-3 mt-10 max-w-7xl mx-3">
+          <h1 className="mx-2 font-semibold">Tags:</h1>
+          <ul className="flex text-white overflow-scroll scrollbar-none">
+            {tags.map((tag) => (
+              <li
+                key={tag._id}
+                className="bg-purple-600 text-sm mx-1 px-3 py-2 rounded-md my-1 flex-shrink-0 hover:bg-purple-800 hover:cursor-pointer"
+                onClick={() => fetchQuoteByTag(tag.slug)}
+              >
+                <span>#{tag.name}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         {/* Quote */}
         {quote && (
-          <div className="text-center pt-5">
+          <div className="text-center mx-10 md:mx-0 my-12 backdrop-blur-md bg-white/40 rounded py-4 px-4">
             <p className="font-semibold">{quote.text}</p>
-            <p className="text-gray-600">- {quote.author}</p>
+            <p className="text-gray-700 text-sm mt-1 italic">- {quote.author}</p>
           </div>
         )}
       </div>
