@@ -33,16 +33,16 @@ function LexicaImage({ quote }: Props) {
   };
 
   return (
-    <div className="bg-red-500">
+    <div className="bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-400">
       {quote && (
-        <div className="bg-purple-300 py-7">
-          <div className="text-center text-3xl font-bold mx-5">
+        <div className="py-7">
+          <div className="text-center text-gray-100 text-3xl font-bold mx-1">
             Generate an image for this quote
           </div>
 
           <div className="flex items-center justify-center mt-5">
             <button
-              className="bg-purple-500 hover:bg-purple-800 text-white font-semibold px-3 py-2 mt-5 rounded"
+              className="bg-white hover:bg-purple-100 text-purple-500 font-semibold px-3 py-2 mt-5 rounded"
               onClick={searchImage}
             >
               Show an AI generated cool image!
@@ -59,7 +59,7 @@ function LexicaImage({ quote }: Props) {
             </button>
           </div>
           {isLoading ? (
-            <div className="text-center mt-5">Loading...</div>
+            <div className="text-center text-white mt-5">Loading...</div>
           ) : (
             <div className="rounded-md w-[450px] mx-auto mt-7">
               {imageUrl ? (
@@ -69,9 +69,9 @@ function LexicaImage({ quote }: Props) {
                     src={imageUrl}
                     alt="AI-generated image"
                   />
-                  <div className="flex justify-center mt-3">
+                  <div className="flex justify-center my-5">
                     <button
-                      className="bg-purple-500 hover:bg-purple-800 text-white font-semibold px-3 py-2 rounded"
+                      className="bg-purple-500 border border-white hover:bg-purple-800 text-white font-semibold px-3 py-2 rounded"
                       onClick={handleDownload}
                     >
                       Download
@@ -79,7 +79,7 @@ function LexicaImage({ quote }: Props) {
                   </div>
                 </>
               ) : (
-                <div className="text-center">No image found.</div>
+                <div className="text-center text-white mx-auto">No image found.</div>
               )}
             </div>
           )}
