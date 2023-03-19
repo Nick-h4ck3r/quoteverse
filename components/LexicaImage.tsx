@@ -10,11 +10,12 @@ function LexicaImage({ quote }: Props) {
 
   // map over the quote words and replace spaces with + for the api
   const quoteWords = quote?.split(" ").map((word) => word.replace(" ", "+"));
+  const quoteWordsString = quoteWords?.join("+");
 
   const searchImage = async () => {
     setIsLoading(true);
     const response = await fetch(
-      `https://lexica.art/api/v1/search?q=${quoteWords}`
+      `https://lexica.art/api/v1/search?q=${quoteWordsString}`
     );
     const data = await response.json();
 
