@@ -50,7 +50,7 @@ function Quote({}: Props) {
   return (
     <div id="Quote" className="h-screen bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-400 pt-12">
       <div className="bg-purple-200 bg-opacity-40 py-4 pb-7">
-        <div className="text-white text-center font-bold md:text-6xl mx-3 text-5xl py-10">Generate a cool quote!</div>
+        <div className="text-white text-center font-bold md:text-6xl px-2 text-4xl py-10">Generate a cool quote!</div>
         
 
         {/* Searchbar for quote */}
@@ -64,7 +64,7 @@ function Quote({}: Props) {
 
           <div className="pt-2 text-lg mx-2">
             <span className="text-white/95 font-medium">
-              Click on a{" "}
+              Click on any{" "}
               <span className="bg-white text-sm font-medium text-purple-600 rounded px-2 py-1 mx-1">
                 #tag
               </span>{" "}
@@ -113,7 +113,7 @@ function Quote({}: Props) {
         </div>
 
         <div className="flex items-center justify-center md:mt-3 mt-7 max-w-7xl mx-4">
-          <h1 className="mx-2 text-white font-semibold">Tags:</h1>
+          <h1 className="mx-2 text-white font-semibold underline underline-offset-2">Tags:</h1>
           <ul className="flex text-white overflow-scroll scrollbar-none">
             {tags.map((tag) => (
               <li
