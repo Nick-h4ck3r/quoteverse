@@ -48,10 +48,14 @@ function Quote({}: Props) {
   };
 
   return (
-    <div id="Quote" className="h-screen bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-400 pt-12">
-      <div className="bg-purple-200 bg-opacity-40 py-4 pb-7">
-        <div className="text-white text-center font-bold md:text-6xl px-2 text-4xl py-10">Generate a cool quote!</div>
-        
+    <div
+      id="Quote"
+      className="h-screen bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-400 md:pt-16 pt-12"
+    >
+      <div className="bg-purple-200 bg-opacity-20 md:mt-3 py-4 pb-7">
+        <div className="text-white text-center font-bold md:text-6xl px-2 text-4xl py-10">
+          Generate a cool quote!
+        </div>
 
         {/* Searchbar for quote */}
         <div className="flex items-center justify-center mt-3 md:mx-auto max-w-3xl lg:max-w-5xl mx-5 flex-col md:flex-row">
@@ -62,8 +66,8 @@ function Quote({}: Props) {
             placeholder="Search for a quote"
           /> */}
 
-          <div className="pt-2 text-lg mx-2">
-            <span className="text-white/95 font-medium">
+          <div className="md:pt-4 text-lg mx-2 md:mb-5">
+            <span className="text-white/95 font-medium md:text-2xl">
               Click on any{" "}
               <span className="bg-white text-sm font-medium text-purple-600 rounded px-2 py-1 mx-1">
                 #tag
@@ -101,7 +105,9 @@ function Quote({}: Props) {
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className={`w-4 h-4 inline-block ml-2 ${isLoading ? "animate-spin" : ""}`}
+              className={`w-4 h-4 inline-block ml-2 ${
+                isLoading ? "animate-spin" : ""
+              }`}
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -112,13 +118,15 @@ function Quote({}: Props) {
           </button>
         </div>
 
-        <div className="flex items-center justify-center md:mt-3 mt-7 max-w-7xl mx-4">
-          <h1 className="mx-2 text-white font-semibold underline underline-offset-2">Tags:</h1>
+        <div className="flex items-center md:text-xl justify-center md:mt-10 mt-7 max-w-7xl md:max-w-full md:mx-28 mx-4">
+          <h1 className="mx-2 text-white font-semibold underline underline-offset-2">
+            Tags:
+          </h1>
           <ul className="flex text-white overflow-scroll scrollbar-none">
             {tags.map((tag) => (
               <li
                 key={tag._id}
-                className="bg-white text-purple-600 text-sm mx-1 px-3 py-2 font-medium rounded my-1 flex-shrink-0 hover:bg-purple-100 hover:cursor-pointer"
+                className="bg-white text-purple-600 text-sm md:text-lg mx-1 px-3 py-2 font-medium rounded my-1 flex-shrink-0 hover:bg-purple-100 hover:cursor-pointer"
                 onClick={() => fetchQuoteByTag(tag.slug)}
               >
                 <span>#{tag.name}</span>
@@ -129,9 +137,11 @@ function Quote({}: Props) {
 
         {/* Quote */}
         {quote && (
-          <div className="text-center mx-10 md:mx-0 mt-12 mb-7 backdrop-blur-md bg-white/40 rounded py-4 px-4">
-            <p className="font-semibold">{quote.text}</p>
-            <p className="text-gray-700 text-sm mt-1 italic">- {quote.author}</p>
+          <div className="text-center mx-10 md:max-w-4xl md:mx-auto mt-12 mb-7 backdrop-blur-md bg-white/40 rounded py-4 px-4 md:py-6 md:px-8">
+            <p className="font-semibold md:text-2xl">{quote.text}</p>
+            <p className="text-gray-700 text-sm mt-1 md:mt-3 md:text-right md:mr-5 italic">
+              - {quote.author}
+            </p>
           </div>
         )}
       </div>

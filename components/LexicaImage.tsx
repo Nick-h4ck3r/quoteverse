@@ -36,13 +36,13 @@ function LexicaImage({ quote }: Props) {
     <div className="bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-400">
       {quote && (
         <div className="py-7">
-          <div className="text-center text-gray-100 text-3xl font-bold px-1">
+          <div className="text-center text-gray-100 text-3xl md:text-5xl md:mt-5 font-bold px-1">
             Generate an image for this quote
           </div>
 
           <div className="flex flex-col items-center justify-center mt-5">
             <button
-              className="bg-white hover:bg-purple-100 text-purple-500 font-semibold px-3 py-2 mt-5 rounded"
+              className="bg-white hover:bg-purple-100 text-purple-600 font-semibold px-3 py-2 mt-5 rounded"
               onClick={searchImage}
             >
               Show an AI generated cool image!
@@ -58,7 +58,7 @@ function LexicaImage({ quote }: Props) {
               </svg>
             </button>
 
-            <div className="text-center text-white text-xs mt-4 px-4">
+            <div className="text-center text-white text-xs md:text-sm mt-4 px-4">
               <span>P.S. Don&apos;t send too many requests, otherwise request will stuck.</span>
             </div>
           </div>
