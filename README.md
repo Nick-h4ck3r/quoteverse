@@ -1,38 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Quoteverse
 
-## Getting Started
+![image](https://github.com/Nick-h4ck3r/quoteverse/assets/70500923/ada1aa79-7506-4a55-b37e-f7842aa98b3c)
 
-First, run the development server:
+![image](https://github.com/Nick-h4ck3r/quoteverse/assets/70500923/1183a67a-f749-4ee8-9723-a83dda49059c)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Description
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+This project is a web application that allows users to generate and explore quotes from various categories. Users can either fetch random quotes or search for quotes with specific tags. Additionally, the application integrates with Lexica, an AI image generation service, to create visually appealing images based on the entered quotes.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Features
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Random Quote Generation:** Click the "Random" button to fetch a random quote.
+- **Tag-Based Quote Retrieval:** Click on tags to fetch quotes associated with specific categories.
+- **Lexica Integration:** Generate AI-generated images based on the entered quote.
+- **Image Download:** Download the generated AI image.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Usage
 
-## Learn More
+1. Open the application and explore the various tags provided.
+2. Click on a tag to fetch a quote related to that category.
+3. Use the "Random" button to generate a random quote.
+4. For selected quotes, click the "Show an AI generated cool image!" button to create an AI-generated image.
+5. Download the generated image by clicking the "Download" button.
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run the project locally:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
+4. Run `npm start` to start the development server.
+5. Open your browser and go to `http://localhost:3000` to view the application.
 
-## Deploy on Vercel
+## Dependencies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- NextJs: [https://nextjs.org/](https://nextjs.org/)
+- Tailwind CSS: [https://tailwindcss.com/](https://tailwindcss.com/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Credits
+
+- Quotes: [Quotable API](https://api.quotable.io/)
+- AI Image Generation: [Lexica](https://lexica.art/)
+
+## Important Note
+
+Be cautious not to send too many requests to Lexica, as it may lead to requests getting stuck.
+
+Feel free to explore, generate, and enjoy the quotes and AI-generated images!
