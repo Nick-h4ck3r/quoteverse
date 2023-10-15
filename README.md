@@ -1,8 +1,10 @@
 # Quoteverse
 
-![image](https://github.com/Nick-h4ck3r/quoteverse/assets/70500923/ada1aa79-7506-4a55-b37e-f7842aa98b3c)
+## Generate a quote
+![image](https://github.com/Nick-h4ck3r/quoteverse/assets/70500923/a14fd00e-b6a7-4a7c-aaa2-59699eaa74b9)
 
-![image](https://github.com/Nick-h4ck3r/quoteverse/assets/70500923/1183a67a-f749-4ee8-9723-a83dda49059c)
+## Generate a image with AI
+![image](https://github.com/Nick-h4ck3r/quoteverse/assets/70500923/9bbab50a-09f0-42d4-bf40-86bfe3660861)
 
 
 ## Description
